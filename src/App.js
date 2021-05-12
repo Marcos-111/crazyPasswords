@@ -3,12 +3,14 @@ import "./App.css";
 import Generator from "./generator/generator";
 import FAQ from "./faq/faq";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import logo from "./logo.png"
 
 function App() {
   return (
     <Router>
       <nav class="flex items-center justify-between flex-wrap bg-teal p-6">
         <div class="flex items-center flex-no-shrink text-white mr-6">
+          <img class="w-20"src={logo}/>
           <span class="font-semibold text-xl tracking-tight text-black">
             Crazy Passwords
           </span>

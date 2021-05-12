@@ -5,6 +5,8 @@ import {
   COPY_SUCCESS
 } from '../data.js';
 import { toast, ToastContainer } from 'react-toastify'
+import "./generator.css";
+
 
 function Generator() {
 
@@ -100,8 +102,8 @@ function Generator() {
 
   return (
     <div >
-      <div>
-        <div>
+      <div class="pb-40">
+        <div id="layout">
           <h2 >Password Generator</h2>
           <div>
             <h3>{password}</h3>
@@ -180,6 +182,7 @@ function Generator() {
             pauseOnFocusLoss
             draggable
             pauseOnHover
+            
           />
         </div>
       </div>
