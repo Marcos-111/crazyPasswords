@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
 import Generator from "./generator/generator";
+import Register from "./register/register"
 import FAQ from "./faq/faq";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
               Sign In
             </Link>
 
-            <Link to="/generator" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+            <Link to="/" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
               Password Generator
             </Link>
             <Link to="/faq" class="block mt-4 lg:inline-block lg:mt-0 mr-4">
@@ -33,16 +34,15 @@ function App() {
         </div>
       </nav>
 
-      <Route path="/generator">
-        {" "}
-        <Generator />
+      <Route >
+        <Switch>
+          <Route path="/" component={Generator} exact />
+          <Route path="/faq" component={FAQ} />
+          <Route path="/register" component={Register} />
+          <Route component={Error} />
+        </Switch>
       </Route>
-      <Route path="/register">
-        <FAQ />
-      </Route>
-      <Route path="/faq">
-        <FAQ />
-      </Route>
+
     </Router>
   );
 }

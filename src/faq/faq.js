@@ -1,10 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function FAQ() {
   return (
-    <div>
-      <h1>Working</h1>
+    <div className="font-rale text-5xl font-light pt-36 text-center">
+      <h1>Welcome to the FAQs page</h1>
     </div>
   );
 }
