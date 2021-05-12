@@ -3,7 +3,7 @@ import Generator from "./generator/generator"
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Generator/>
     </div>
   );
