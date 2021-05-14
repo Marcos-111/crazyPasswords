@@ -108,12 +108,12 @@ function Generator() {
             <div className="shadow overflow-hidden sm:rounded-md ">
               <div className="px-4 pgiy-5 bg-white space-y-6 sm:p-6">
                 <section>
-                  <h1 className="text-base font-semibold text-xl text-gray-900">
+                  <h1 className="text-base font-semibold text-2xl text-gray-900">
                     Password Generator
                   </h1>
                   <br/>
                   <div className="flex justify-between text-base font-normal text-gray-900 ">
-                    <h3 className="border-4 border-gray-300">{password}</h3>
+                    <h3 className="border-2 border-gray-800">{password}</h3>
                     <button className="font-normal text-gray-700 " onClick={handleCopyPassword}>
                       Copy <i></i>
                     </button>
@@ -131,7 +131,7 @@ function Generator() {
                       name="password-strength"
                       max="20"
                       min="10"
-                      className="float-right box-border"
+                      className="float-right box-border border-2"
                     />
                   </div>
                   <div className="mt-4 space-y-4">
