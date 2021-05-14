@@ -35,7 +35,7 @@ function FAQ() {
                 </summary>
 
                   <span>
-                    Long time ago.
+                  No one knew much about Jack Sparrow before he searched for the dreaded Isla de Muerta, having said that was before he met Jack, back when he was captain of the Black Pearl
                 </span>
                 </details>
 
