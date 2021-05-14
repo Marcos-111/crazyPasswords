@@ -104,7 +104,7 @@ function Generator() {
     <div className="mt-10 sm:mt-0 w-2/5 pl-12">
       <div className="md:grid md:grid-cols-3 md:gap-6">
         <div className="mt-5 md:mt-0 md:col-span-2">
-          <form action="#" >
+          <form>
             <div className="shadow overflow-hidden sm:rounded-md">
               <div className="px-4 pgiy-5 bg-white space-y-6 sm:p-6">
                 <fieldset>
@@ -113,12 +113,12 @@ function Generator() {
                   </legend>
                   <div className="text-base font-normal text-gray-900">
                     <h3>{password}</h3>
-                    <button class="font-normal text-gray-700" onClick={handleCopyPassword}>
+                    <button className="font-normal text-gray-700" onClick={handleCopyPassword}>
                       Button here <i></i>
                     </button>
                   </div>
                   <div>
-                    <label htmlFor="password-strength" class="font-normal text-gray-700">
+                    <label htmlFor="password-strength" className="font-normal text-gray-700">
                       Password length
                     </label>
                     <input
@@ -129,7 +129,7 @@ function Generator() {
                       name="password-strength"
                       max="20"
                       min="10"
-                      class="float-right box-border"
+                      className="float-right box-border"
                     />
                   </div>
                   <div className="mt-4 space-y-4">
