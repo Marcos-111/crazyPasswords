@@ -3,8 +3,8 @@ import React from "react";
 function Register() {
     return (
         <div>
-            <div className="hidden lg:block font-rale text-5xl font-light p-12 pb-2 text-center">
-                <h1>Welcome to the Sign In page</h1>
+            <div className="hidden lg:block font-rale text-5xl font-light p-10 pb-2 text-center">
+                <h1>Crazy Passwords</h1>
             </div>
 
 
