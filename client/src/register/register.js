@@ -3,16 +3,43 @@ import React from "react";
 function Register() {
     return (
         <div>
-            <div className="hidden lg:block font-rale text-5xl font-light p-8 pb-12 text-center">
-                <h1>Welcome to the Sign In page</h1>
+            <div className="hidden lg:block font-rale text-5xl font-light p-10 pb-2 text-center">
+                <h1>Crazy Passwords</h1>
             </div>
 
 
             <section className="flex flex-col md:p-24 md: pt-12 md:flex-row h-screen items-center">
 
-                <div className="bg-blue-600 hidden lg:block w-full md:w-1/3 xl:w-2/3 h-screen">
-                    { /* <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="" className="w-full h-full object-cover" />
-                 */ }
+                <div className="grid grid-cols-1 md:grid-cols-1">
+                    <div className="hidden lg:block font-rale text-3xl font-light p-8 pb-12 text-center">
+                        <h1>Trusted by them, because it's crazy, because it's yours</h1>
+                    </div>
+                    <div className="pb-8 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+                        <div className="md:flex">
+                            <div className="md:flex-shrink-0">
+                                <img className="h-48 w-full object-cover md:w-48" src="https://d35hsl9am8s2ta.cloudfront.net/public/images/2020/09/16014105610-Negro-Alvarez-773x458.jpg" width="448" height="299" alt="Man looking at item at a store" />
+                            </div>
+                            <div className="p-8">
+                                <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Film actor</div>
+                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">El Negro Alvarez</span>
+                                <p className="mt-2 text-gray-500">When I heard about crazy passwords I was worried first, but I can't memorize all those passwords, you know. I don't even know my ID number.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+                        <div className="md:flex">
+                            <div className="md:flex-shrink-0">
+                                <img className="h-48 w-full object-cover md:w-48" src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTa8DctT2_gLvYDysCZEsx2UJO9xrHRZn950e6zJfStmPF1RC8QY-5cEX7aRRfZ" width="448" height="299" alt="Man looking at item at a store" />
+                            </div>
+                            <div className="p-8">
+                                <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Argentine cartoonist
+</div>
+                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">El Negro Fontanarosa</span>
+                                <p className="mt-2 text-gray-500">Since I'm crazy, I mean since I'm using crazy passwords, my security has been bosted as it never was, thank you CrazyPasswords.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
