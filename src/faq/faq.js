@@ -90,7 +90,7 @@ function FAQ() {
               </div>
               <div class="p-8">
                 <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Argentine comedian</div>
-                <span class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Finding customers for your new business</span>
+                <span class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">El negro Olmedo</span>
                 <p class="mt-2 text-gray-500">Since I use crazy passwords, I feel safer than usual, in La Once I've seen all kinds of things, so I can expect anything, but now, my security is amazing. There you go, Brayan.</p>
               </div>
             </div>
