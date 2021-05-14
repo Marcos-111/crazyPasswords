@@ -102,9 +102,9 @@ function Generator() {
 
   return (
     <div>
-      <div class="pb-40">
-        <div id="layout">
-          <h2>Password Generator</h2>
+      <div class="pb-40 table-fixed ">
+        <div id="layout" class="">
+          <h2 class="text-align-center">Password Generator</h2>
           <div>
             <h3>{password}</h3>
             <button onClick={handleCopyPassword}>
@@ -113,7 +113,7 @@ function Generator() {
           </div>
 
           <div>
-            <label htmlFor="password-strength">Password length</label>
+            <label htmlFor="password-strength" class="">Password length</label>
             <input
               defaultValue={passwordLength}
               onChange={(e) => setPasswordLength(e.target.value)}
@@ -122,17 +122,20 @@ function Generator() {
               name="password-strength"
               max="20"
               min="10"
+              class="float-right box-border"
             />
           </div>
 
           <div>
-            <label htmlFor="uppercase-letters">Include Uppercase Letters</label>
-            <input
+            <label class="col-span-2 static " htmlFor="uppercase-letters">Include Uppercase Letters</label>
+            <input 
               checked={includeUppercase}
               onChange={(e) => setIncludeUppercase(e.target.checked)}
               type="checkbox"
               id="uppercase-letters"
               name="uppercase-letters"
+              class="float-right"
+              
             />
           </div>
 
@@ -144,6 +147,7 @@ function Generator() {
               type="checkbox"
               id="lowercase-letters"
               name="lowercase-letters"
+              class="float-right"
             />
           </div>
 
@@ -155,6 +159,7 @@ function Generator() {
               type="checkbox"
               id="include-numbers"
               name="include-numbers"
+              class="float-right"
             />
           </div>
 
@@ -166,6 +171,8 @@ function Generator() {
               type="checkbox"
               id="include-symbols"
               name="include-symbols"
+              class="float-right"
+              
             />
           </div>
 
@@ -184,6 +191,10 @@ function Generator() {
         </div>
       </div>
     </div>
+
+    
+
+
   );
 }
 

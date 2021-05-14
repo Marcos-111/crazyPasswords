@@ -4,13 +4,13 @@ import Generator from "./generator/generator";
 import Register from "./register/register"
 import FAQ from "./faq/faq";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-
+import logo from "./logo.png"
 function App() {
   return (
     <Router>
       <nav class="flex items-center justify-between flex-wrap bg-teal p-6">
         <div class="flex items-center flex-no-shrink text-white mr-6">
-          <img class="w-20"src={logo}/>
+          <img class="w-20" src={logo} alt="logo"/>
           <span class="font-semibold text-xl tracking-tight text-black">
             Crazy Passwords
           </span>
