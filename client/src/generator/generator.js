@@ -101,100 +101,149 @@ function Generator() {
   };
 
   return (
-    <div>
-      <div class="pb-40 table-fixed ">
-        <div id="layout" class="">
-          <h2 class="text-align-center">Password Generator</h2>
-          <div>
-            <h3>{password}</h3>
-            <button onClick={handleCopyPassword}>
-              Button here <i></i>
-            </button>
-          </div>
-
-          <div>
-            <label htmlFor="password-strength" class="">Password length</label>
-            <input
-              defaultValue={passwordLength}
-              onChange={(e) => setPasswordLength(e.target.value)}
-              type="number"
-              id="password-strength"
-              name="password-strength"
-              max="20"
-              min="10"
-              class="float-right box-border"
-            />
-          </div>
-
-          <div>
-            <label class="col-span-2 static " htmlFor="uppercase-letters">Include Uppercase Letters</label>
-            <input 
-              checked={includeUppercase}
-              onChange={(e) => setIncludeUppercase(e.target.checked)}
-              type="checkbox"
-              id="uppercase-letters"
-              name="uppercase-letters"
-              class="float-right"
-              
-            />
-          </div>
-
-          <div>
-            <label htmlFor="lowercase-letters">Include Lowercase Letters</label>
-            <input
-              checked={includeLowercase}
-              onChange={(e) => setIncludeLowercase(e.target.checked)}
-              type="checkbox"
-              id="lowercase-letters"
-              name="lowercase-letters"
-              class="float-right"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="include-numbers">Include Numbers</label>
-            <input
-              checked={includeNumbers}
-              onChange={(e) => setIncludeNumbers(e.target.checked)}
-              type="checkbox"
-              id="include-numbers"
-              name="include-numbers"
-              class="float-right"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="include-symbols">Include Symbols</label>
-            <input
-              checked={includeSymbols}
-              onChange={(e) => setIncludeSymbols(e.target.checked)}
-              type="checkbox"
-              id="include-symbols"
-              name="include-symbols"
-              class="float-right"
-              
-            />
-          </div>
-
-          <button onClick={handleGeneratePassword}>Generate Password</button>
-          <ToastContainer
-            position="top-center"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
+    <div className="mt-10 sm:mt-0 w-2/5 pl-12">
+      <div className="md:grid md:grid-cols-3 md:gap-6">
+        <div className="mt-5 md:mt-0 md:col-span-2">
+          <form action="#" >
+            <div className="shadow overflow-hidden sm:rounded-md">
+              <div className="px-4 pgiy-5 bg-white space-y-6 sm:p-6">
+                <fieldset>
+                  <legend className="text-base font-normal text-xl text-gray-900">
+                    Password Generator
+                  </legend>
+                  <div className="text-base font-normal text-gray-900">
+                    <h3>{password}</h3>
+                    <button class="font-normal text-gray-700" onClick={handleCopyPassword}>
+                      Button here <i></i>
+                    </button>
+                  </div>
+                  <div>
+                    <label htmlFor="password-strength" class="font-normal text-gray-700">
+                      Password length
+                    </label>
+                    <input
+                      defaultValue={passwordLength}
+                      onChange={(e) => setPasswordLength(e.target.value)}
+                      type="number"
+                      id="password-strength"
+                      name="password-strength"
+                      max="20"
+                      min="10"
+                      class="float-right box-border"
+                    />
+                  </div>
+                  <div className="mt-4 space-y-4">
+                    <div className="flex items-start">
+                      <div className="flex items-center h-5">
+                        <input
+                          checked={includeUppercase}
+                          onChange={(e) =>
+                            setIncludeUppercase(e.target.checked)
+                          }
+                          type="checkbox"
+                          id="uppercase-letters"
+                          name="uppercase-letters"
+                          className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        />
+                      </div>
+                      <div className="ml-3 text-sm">
+                        <label
+                          htmlFor="lowercase-letters"
+                          className="font-medium text-gray-700"
+                        >
+                          Include Uppercase Letters
+                        </label>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="flex items-center h-5">
+                        <input
+                          checked={includeLowercase}
+                          onChange={(e) =>
+                            setIncludeLowercase(e.target.checked)
+                          }
+                          type="checkbox"
+                          id="lowercase-letters"
+                          name="lowercase-letters"
+                          className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        />
+                      </div>
+                      <div className="ml-3 text-sm">
+                        <label
+                          htmlFor="lowercase-letters"
+                          className="font-medium text-gray-700"
+                        >
+                          Include Lowercase Letters
+                        </label>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="flex items-center h-5">
+                        <input
+                          checked={includeNumbers}
+                          onChange={(e) => setIncludeNumbers(e.target.checked)}
+                          type="checkbox"
+                          id="include-numbers"
+                          name="include-numbers"
+                          className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        />
+                      </div>
+                      <div className="ml-3 text-sm">
+                        <label
+                          htmlFor="include-numbers"
+                          className="font-medium text-gray-700"
+                        >
+                          Include Numbers
+                        </label>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="flex items-center h-5">
+                        <input
+                          checked={includeSymbols}
+                          onChange={(e) => setIncludeSymbols(e.target.checked)}
+                          type="checkbox"
+                          id="include-symbols"
+                          name="include-symbols"
+                          className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        />
+                      </div>
+                      <div className="ml-3 text-sm">
+                        <label
+                          htmlFor="include-symbols"
+                          className="font-medium text-gray-700"
+                        >
+                          Include Symbols
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                <button
+                  onClick={handleGeneratePassword}
+                  className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Generate Password
+                </button>
+                <ToastContainer
+                  position="top-center"
+                  autoClose={5000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                />
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-
-    
-
-
   );
 }
 
