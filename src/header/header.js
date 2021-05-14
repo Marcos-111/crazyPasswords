@@ -36,7 +36,7 @@ function Header() {
 </nav>
 
 <Route >
-  <Switch>
+  <Switch >
     <Route path="/" component={Generator} exact />
     <Route path="/faq" component={FAQ} />
     <Route path="/register" component={Register} />
