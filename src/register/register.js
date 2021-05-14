@@ -1,4 +1,5 @@
 import React from "react";
+
 function Register() {
     return (        
         <div className="font-rale text-5xl font-light pt-36 text-center">
