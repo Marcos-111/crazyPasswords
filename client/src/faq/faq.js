@@ -22,7 +22,7 @@ function FAQ() {
             <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
               <div className="w-full lg:w-1/2 px-4 py-2">
                 <details className="mb-4">
-                  <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+                  <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4 cursor-pointer">
                     What is crazy passwords?
 
                 </summary>
@@ -31,7 +31,7 @@ function FAQ() {
                     Crazy Passwords is a project we are doing to get along with React and Tailwindcss. We're doing this to give our team a point of reference and have something else to show them and show the world!                </span>
                 </details>
                 <details className="mb-4">
-                  <summary className="font-semibold bg-gray-200 rounded-md py-2 px-4">
+                  <summary className="font-semibold bg-gray-200 rounded-md py-2 px-4 cursor-pointer">
                     How Long is this site live?
                 </summary>
 
@@ -43,7 +43,7 @@ function FAQ() {
               </div>
               <div className="w-full lg:w-1/2 px-4 py-2">
                 <details className="mb-4">
-                  <summary className="font-semibold bg-gray-200 rounded-md py-2 px-4">
+                  <summary className="font-semibold bg-gray-200 rounded-md py-2 px-4 cursor-pointer">
 
                     How does it work?
                 </summary>
@@ -55,7 +55,7 @@ function FAQ() {
                 </span>
                 </details>
                 <details className="mb-4">
-                  <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+                  <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4 cursor-pointer">
                     How can I trust crazy passwords?
                 </summary>
 

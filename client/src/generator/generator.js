@@ -101,10 +101,10 @@ function Generator() {
   };
 
   return (
-    <div className="mt-10 sm:mt-0  ">
-      <div className="md:grid md:grid-cols-3 md:gap-6 md:pl-64 md:pt-16">
-        <div className="mt-5 md:mt-0 md:col-span-2">
-          <div>
+    <div className="height text-center box-content sm:mt-0 font-mono bg-purple-200">
+      <div className="md:px-24 md:mx-32">
+        <div className="md:col-span-2">
+          <div className="pt-16">
             <div className="shadow overflow-hidden sm:rounded-md ">
               <div className="px-4 pgiy-5 bg-white space-y-6 sm:p-6">
                 <section>
@@ -113,7 +113,7 @@ function Generator() {
                   </h1>
                   <br/>
                   <div className="flex justify-between text-base font-normal text-gray-900 ">
-                    <h3 className="border-2 border-gray-800">{password}</h3>
+                    <h3 className=" ">{password}</h3>
                     <button className="font-normal text-gray-700 " onClick={handleCopyPassword}>
                       Copy <i></i>
                     </button>
@@ -225,10 +225,11 @@ function Generator() {
               <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
                 <button
                   onClick={handleGeneratePassword}
-                  className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className=" inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Generate Password
                 </button>
+                <div class="mt-4 cursor-pointer">
                 <ToastContainer
                   position="top-center"
                   autoClose={5000}
@@ -240,6 +241,7 @@ function Generator() {
                   draggable
                   pauseOnHover
                 />
+                </div>
               </div>
             </div>
           </div>

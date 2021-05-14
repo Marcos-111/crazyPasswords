@@ -21,7 +21,7 @@ function Register() {
                             </div>
                             <div className="p-8">
                                 <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Film actor</div>
-                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">El Negro Alvarez</span>
+                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline cursor-pointer">El Negro Alvarez</span>
                                 <p className="mt-2 text-gray-500">When I heard about crazy passwords I was worried first, but I can't memorize all those passwords, you know. I don't even know my ID number.</p>
                             </div>
                         </div>
@@ -35,7 +35,7 @@ function Register() {
                             <div className="p-8">
                                 <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Argentine cartoonist
 </div>
-                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">El Negro Fontanarosa</span>
+                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline cursor-pointer">El Negro Fontanarosa</span>
                                 <p className="mt-2 text-gray-500">Since I'm crazy, I mean since I'm using crazy passwords, my security has been bosted as it never was, thank you CrazyPasswords.</p>
                             </div>
                         </div>
