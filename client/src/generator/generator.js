@@ -113,12 +113,12 @@ function Generator() {
                   </h1>
                   <div className="flex text-base font-normal text-gray-900">
                     <h3>{password}</h3>
-                    <button class="font-normal text-gray-700" onClick={handleCopyPassword}>
+                    <button className="font-normal text-gray-700" onClick={handleCopyPassword}>
                       Button here <i></i>
                     </button>
                   </div>
                   <div>
-                    <label htmlFor="password-strength" class="font-normal text-gray-700">
+                    <label htmlFor="password-strength" className="font-normal text-gray-700">
                       Password length
                     </label>
                     <input
@@ -129,7 +129,7 @@ function Generator() {
                       name="password-strength"
                       max="20"
                       min="10"
-                      class="float-right box-border"
+                      className="float-right box-border"
                     />
                   </div>
                   <div className="mt-4 space-y-4">
