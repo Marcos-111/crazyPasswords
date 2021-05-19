@@ -30,13 +30,13 @@ function Register() {
                     <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                         <div className="md:flex">
                             <div className="md:flex-shrink-0">
-                                <img className="h-48 w-full object-cover md:w-48" src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTa8DctT2_gLvYDysCZEsx2UJO9xrHRZn950e6zJfStmPF1RC8QY-5cEX7aRRfZ" width="448" height="299" alt="Man looking at item at a store" />
+                                <img className="h-48 w-full object-cover md:w-48" src="https://images-ext-1.discordapp.net/external/CHuya98xNEndoJa_1GW42gdyZdnS3fUxgXLKz9BD_s4/https/www.cadena3.com/admin/playerswf/fotos/ARCHI_469847.jpg" width="448" height="299" alt="Man looking at item at a store" />
                             </div>
                             <div className="p-8">
-                                <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Argentine cartoonist
+                                <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Argentine Champion
 </div>
-                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline cursor-pointer">El Negro Fontanarosa</span>
-                                <p className="mt-2 text-gray-500">Since I'm crazy, I mean since I'm using crazy passwords, my security has been bosted as it never was, thank you CrazyPasswords.</p>
+                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline cursor-pointer">El cabezon Ruggieri</span>
+                                <p className="mt-2 text-gray-500">Crazypasswords changed my life. I used to be in drugs, problems at the wheel, since I won the world cup I always had troubles with my security but now I easily can get things done!</p>
                             </div>
                         </div>
                     </div>
