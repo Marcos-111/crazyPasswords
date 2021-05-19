@@ -61,8 +61,7 @@ function Register() {
 
                         <h1 className="text-xl md:text-2xl font-bold leading-tight mt-12">Sign Up </h1>
 
-                        <form className="mt-6" action="#" method="POST">
-
+                        <section className="mt-6">
                             <div>
                                 <label className="block text-gray-700">Username</label>
                                 <input type="text"
@@ -88,7 +87,7 @@ function Register() {
 
                             <button onClick={register} type="submit" className="w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
               px-4 py-3 mt-6">Sign Up</button>
-                        </form>
+                        </section>
 
                         <div className="my-6 border-gray-300 w-full">
 
