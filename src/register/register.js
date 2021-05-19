@@ -17,12 +17,12 @@ function Register() {
                     <div className="pb-8 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                         <div className="md:flex">
                             <div className="md:flex-shrink-0">
-                                <img className="h-48 w-full object-cover md:w-48" src="https://d35hsl9am8s2ta.cloudfront.net/public/images/2020/09/16014105610-Negro-Alvarez-773x458.jpg" width="448" height="299" alt="Man looking at item at a store" />
+                                <img className="h-48 w-full object-cover md:w-48" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Juan_Schiaretti_%28cropped%29.jpg" width="448" height="299" alt="Man looking at item at a store" />
                             </div>
                             <div className="p-8">
-                                <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Film actor</div>
-                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline cursor-pointer">El Negro Alvarez</span>
-                                <p className="mt-2 text-gray-500">When I heard about crazy passwords I was worried first, but I can't memorize all those passwords, you know. I don't even know my ID number.</p>
+                                <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Cordoba's Governor</div>
+                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline cursor-pointer">Juan Schiaretti</span>
+                                <p className="mt-2 text-gray-500">I completely trust them, as a governor, it is my duty to provide security and prosperity to my citizens, and no password manager does it better. Thank you crazyPasswords.</p>
                             </div>
                         </div>
                     </div>
@@ -51,6 +51,10 @@ function Register() {
 
                         <form className="mt-6" action="#" method="POST">
                             <div>
+                                <label className="block text-gray-700">Name</label>
+                                <input type="email" name="" id="" placeholder="Enter Name" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required />
+                            </div>
+                            <div>
                                 <label className="block text-gray-700">Email Address</label>
                                 <input type="email" name="" id="" placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required />
                             </div>
@@ -64,10 +68,6 @@ function Register() {
                                 <label className="block text-gray-700">Repeat Password</label>
                                 <input type="password" name="" id="" placeholder="Enter Password" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                 focus:bg-white focus:outline-none" required />
-                            </div>
-
-                            <div className="text-right mt-2">
-                                <a href="#" className="text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700">Forgot Password?</a>
                             </div>
 
                             <button type="submit" className="w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
@@ -84,8 +84,7 @@ function Register() {
                                 </div>
                             </button>
                         </div>
-                        <p className="mt-8">Need an account? <a href="#" className="text-blue-500 hover:text-blue-700 font-semibold">Create an
-              account</a></p>
+                        
 
                         <p className="text-sm text-gray-500 mt-12">&copy; 2021 CrazyPasswords - All Rights Reserved.</p>
                     </div>
