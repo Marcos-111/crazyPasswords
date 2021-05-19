@@ -80,7 +80,7 @@ function Login() {
                                 </div>
                             </button>
                         </div>
-                        <p className="mt-8">Need an account? <a href="#" className="text-blue-500 hover:text-blue-700 font-semibold">Create an
+                        <p className="mt-8">Need an account? <a to="/register" className="text-blue-500 hover:text-blue-700 font-semibold">Create an
               account</a></p>
 
                         <p className="text-sm text-gray-500 mt-12">&copy; 2021 CrazyPasswords - All Rights Reserved.</p>
