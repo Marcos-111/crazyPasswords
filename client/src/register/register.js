@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
+import Axios from 'axios';
 
 function Register() {
+    const [usernameReg, setUsernameReg] = useState("");
+    const [passwordReg, setPasswordReg] = useState("");
+
+    const register = () => {
+        Axios.post("https://localhost/3000/register", {
+            username: usernameReg,
+            password: passwordReg,
+
+        }).then((response) => {
+            console.log(response);
+        });
+    };
+
     return (
         <div>
             <div className="hidden lg:block font-rale text-5xl font-light p-10 pb-2 text-center">
                 <h1>Crazy Passwords</h1>
             </div>
-
-
             <section className="flex flex-col md:p-24 md: pt-12 md:flex-row h-screen items-center">
 
                 <div className="grid grid-cols-1 md:grid-cols-1">
@@ -35,7 +47,7 @@ function Register() {
                             <div className="p-8">
                                 <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Argentine Champion
 </div>
-                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline cursor-pointer">El cabezon Ruggieri</span>
+                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline cursor-pointer">Oscar Ruggeri</span>
                                 <p className="mt-2 text-gray-500">Crazypasswords changed my life. I used to be in drugs, problems at the wheel, since I won the world cup I always had troubles with my security but now I easily can get things done!</p>
                             </div>
                         </div>
@@ -50,18 +62,22 @@ function Register() {
                         <h1 className="text-xl md:text-2xl font-bold leading-tight mt-12">Sign Up </h1>
 
                         <form className="mt-6" action="#" method="POST">
+
                             <div>
-                                <label className="block text-gray-700">Name</label>
-                                <input type="email" name="" id="" placeholder="Enter Name" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required />
-                            </div>
-                            <div>
-                                <label className="block text-gray-700">Email Address</label>
-                                <input type="email" name="" id="" placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required />
+                                <label className="block text-gray-700">Username</label>
+                                <input type="text"
+                                    onChange={(e) => {
+                                        setUsernameReg(e.target.value);
+                                    }} required type="text" placeholder="Enter an username" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" />
                             </div>
 
                             <div className="mt-4">
                                 <label className="block text-gray-700">Password</label>
-                                <input type="password" name="" id="" placeholder="Enter Password" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                                <input type="text"
+                                    onChange={(e) => {
+                                        setPasswordReg(e.target.value);
+                                    }}
+                                    type="password" name="" id="" placeholder="Enter Password" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                 focus:bg-white focus:outline-none" required />
                             </div>
                             <div className="mt-4">
@@ -70,7 +86,7 @@ function Register() {
                 focus:bg-white focus:outline-none" required />
                             </div>
 
-                            <button type="submit" className="w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
+                            <button onClick={register} type="submit" className="w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
               px-4 py-3 mt-6">Sign Up</button>
                         </form>
 
@@ -83,8 +99,9 @@ function Register() {
             Google</span>
                                 </div>
                             </button>
+
                         </div>
-                        
+
 
                         <p className="text-sm text-gray-500 mt-12">&copy; 2021 CrazyPasswords - All Rights Reserved.</p>
                     </div>

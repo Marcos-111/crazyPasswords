@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import Axios from 'axios';
 
 function Login() {
+    const [loginStatus, setLoginStatus] = useState("");
+
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+
+    const login = () => {
+        Axios.post("https://localhost/3000/login", {
+            username: username,
+            password: password,
+
+        }).then((response) => {
+
+            if (response.data.message) {
+                setLoginStatus(response.data.message)
+            } else {
+                setLoginStatus(response.data[0].username)
+            }
+        });
+    };
     return (
         <div>
             <div className="hidden lg:block font-rale text-5xl font-light p-10 pb-2 text-center">
@@ -49,15 +69,19 @@ function Login() {
 
                         <h1 className="text-xl md:text-2xl font-bold leading-tight mt-12">Log in to your account</h1>
 
-                        <form className="mt-6" action="#" method="POST">
+                        <section className="mt-6">
                             <div>
-                                <label className="block text-gray-700">Email Address</label>
-                                <input type="email" name="" id="" placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required />
+                                <label className="block text-gray-700">Username</label>
+                                <input onChange={(e) => {
+                                    setUsername(e.target.value);
+                                }} type="text" placeholder="Enter username" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required />
                             </div>
 
                             <div className="mt-4">
                                 <label className="block text-gray-700">Password</label>
-                                <input type="password" name="" id="" placeholder="Enter Password" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                                <input onChange={(e) => {
+                                    setPassword(e.target.value);
+                                }} type="password" placeholder="Enter Password" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                 focus:bg-white focus:outline-none" required />
                             </div>
 
@@ -65,9 +89,9 @@ function Login() {
                                 <a href="#" className="text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700">Forgot Password?</a>
                             </div>
 
-                            <button type="submit" className="w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
+                            <button onClick={login} type="submit" className="w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
               px-4 py-3 mt-6">Log In</button>
-                        </form>
+                        </section>
 
                         <div className="my-6 border-gray-300 w-full">
 
@@ -86,7 +110,7 @@ function Login() {
                         <p className="text-sm text-gray-500 mt-12">&copy; 2021 CrazyPasswords - All Rights Reserved.</p>
                     </div>
                 </div>
-
+                <h1>{loginStatus}</h1>
             </section>
         </div>
 

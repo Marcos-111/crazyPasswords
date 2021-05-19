@@ -1,4 +1,8 @@
-function App() {
+import React, {useState} from "react";
+import axios from 'axios';
+ 
+
+function Register() {
     const [usernameReg, setUsernameReg] = useState("");
     const [passwordReg, setPasswordReg] = useState("");
 
@@ -6,7 +10,7 @@ function App() {
     const [password, setPassword] = useState("");
 
 
-    const [loginStatus, setLoginStatus] = useState("");
+    const [setLoginStatus] = useState("");
 
     const register = () => {
         Axios.post("https://localhost/3001/register", {
@@ -56,18 +60,20 @@ function App() {
                     <label>Username</label>
                     <input type="text"
                         onChange={(e) => {
-                            setUsername(e.target.value);
+                            setUsernameReg(e.target.value);
                         }} />
                     <label>Password</label>
                     <input type="text"
                         onChange={(e) => {
-                            setPassword(e.target.value);
+                            setPasswordReg(e.target.value);
                         }}
                     />
-                    <button onClick={login}>Login</button>
+                    <button>Login</button>
                 </div>
-                <h1>{loginStatus}</h1>
+                <h1>{setLoginStatus}</h1>
             </div>
         </div>
     )
 }
+
+export default Register
