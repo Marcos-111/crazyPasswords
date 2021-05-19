@@ -27,7 +27,7 @@ function Header() {
             <nav>
               <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                 <Link
-                  to="/register"
+                  to="/login"
                   className="md:p-4 py-3 px-0 block"
                 >
                   Sign In
