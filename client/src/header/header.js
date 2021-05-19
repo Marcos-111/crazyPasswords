@@ -1,6 +1,7 @@
 import React from "react";
 import Generator from "../generator/generator";
 import Login from "../login/login.js";
+import Register from "../register/register";
 import FAQ from "../faq/faq";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import logo from "../logo.png"
@@ -27,10 +28,16 @@ function Header() {
             <nav>
               <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                 <Link
-                  to="/register"
+                  to="/login"
                   className="md:p-4 py-3 px-0 block"
                 >
                   Sign In
+                </Link>
+                <Link
+                  to="/register"
+                  className="md:p-4 py-3 px-0 block"
+                >
+                  Sign Up
                 </Link>
                 <Link to="/" className="md:p-4 py-3 px-0 block">
                   Password Generator
@@ -48,6 +55,8 @@ function Header() {
           <Route path="/" component={Generator} exact />
           <Route path="/faq" component={FAQ} />
           <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+
           <Route component={Error} />
         </Switch>
       </Route>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Login() {
+function Register() {
     return (
         <div>
             <div className="hidden lg:block font-rale text-5xl font-light p-10 pb-2 text-center">
@@ -17,12 +17,12 @@ function Login() {
                     <div className="pb-8 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                         <div className="md:flex">
                             <div className="md:flex-shrink-0">
-                                <img className="h-48 w-full object-cover md:w-48" src="https://d35hsl9am8s2ta.cloudfront.net/public/images/2020/09/16014105610-Negro-Alvarez-773x458.jpg" width="448" height="299" alt="Man looking at item at a store" />
+                                <img className="h-48 w-full object-cover md:w-48" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Juan_Schiaretti_%28cropped%29.jpg" width="448" height="299" alt="Man looking at item at a store" />
                             </div>
                             <div className="p-8">
-                                <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Film actor</div>
-                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline cursor-pointer">El Negro Alvarez</span>
-                                <p className="mt-2 text-gray-500">When I heard about crazy passwords I was worried first, but I can't memorize all those passwords, you know. I don't even know my ID number.</p>
+                                <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Cordoba's Governor</div>
+                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline cursor-pointer">Juan Schiaretti</span>
+                                <p className="mt-2 text-gray-500">I completely trust them, as a governor, it is my duty to provide security and prosperity to my citizens, and no password manager does it better. Thank you crazyPasswords.</p>
                             </div>
                         </div>
                     </div>
@@ -30,13 +30,13 @@ function Login() {
                     <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                         <div className="md:flex">
                             <div className="md:flex-shrink-0">
-                                <img className="h-48 w-full object-cover md:w-48" src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTa8DctT2_gLvYDysCZEsx2UJO9xrHRZn950e6zJfStmPF1RC8QY-5cEX7aRRfZ" width="448" height="299" alt="Man looking at item at a store" />
+                                <img className="h-48 w-full object-cover md:w-48" src="https://images-ext-1.discordapp.net/external/CHuya98xNEndoJa_1GW42gdyZdnS3fUxgXLKz9BD_s4/https/www.cadena3.com/admin/playerswf/fotos/ARCHI_469847.jpg" width="448" height="299" alt="Man looking at item at a store" />
                             </div>
                             <div className="p-8">
-                                <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Argentine cartoonist
+                                <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Argentine Champion
 </div>
-                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline cursor-pointer">El Negro Fontanarosa</span>
-                                <p className="mt-2 text-gray-500">Since I'm crazy, I mean since I'm using crazy passwords, my security has been bosted as it never was, thank you CrazyPasswords.</p>
+                                <span className="block mt-1 text-lg leading-tight font-medium text-black hover:underline cursor-pointer">El cabezon Ruggieri</span>
+                                <p className="mt-2 text-gray-500">Crazypasswords changed my life. I used to be in drugs, problems at the wheel, since I won the world cup I always had troubles with my security but now I easily can get things done!</p>
                             </div>
                         </div>
                     </div>
@@ -47,9 +47,13 @@ function Login() {
 
                     <div className="w-full h-100">
 
-                        <h1 className="text-xl md:text-2xl font-bold leading-tight mt-12">Log in to your account</h1>
+                        <h1 className="text-xl md:text-2xl font-bold leading-tight mt-12">Sign Up </h1>
 
                         <form className="mt-6" action="#" method="POST">
+                            <div>
+                                <label className="block text-gray-700">Name</label>
+                                <input type="email" name="" id="" placeholder="Enter Name" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required />
+                            </div>
                             <div>
                                 <label className="block text-gray-700">Email Address</label>
                                 <input type="email" name="" id="" placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required />
@@ -60,13 +64,14 @@ function Login() {
                                 <input type="password" name="" id="" placeholder="Enter Password" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                 focus:bg-white focus:outline-none" required />
                             </div>
-
-                            <div className="text-right mt-2">
-                                <a href="#" className="text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700">Forgot Password?</a>
+                            <div className="mt-4">
+                                <label className="block text-gray-700">Repeat Password</label>
+                                <input type="password" name="" id="" placeholder="Enter Password" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                focus:bg-white focus:outline-none" required />
                             </div>
 
                             <button type="submit" className="w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
-              px-4 py-3 mt-6">Log In</button>
+              px-4 py-3 mt-6">Sign Up</button>
                         </form>
 
                         <div className="my-6 border-gray-300 w-full">
@@ -74,14 +79,12 @@ function Login() {
                             <button type="button" className="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300">
                                 <div className="flex items-center justify-center">
                                     <span className="ml-4">
-                                        Log in
-                                        with
+                                        Sign up                                        with
             Google</span>
                                 </div>
                             </button>
                         </div>
-                        <p className="mt-8">Need an account? <a to="/register" className="text-blue-500 hover:text-blue-700 font-semibold">Create an
-              account</a></p>
+                        
 
                         <p className="text-sm text-gray-500 mt-12">&copy; 2021 CrazyPasswords - All Rights Reserved.</p>
                     </div>
@@ -93,4 +96,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Register;
