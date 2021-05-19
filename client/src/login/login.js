@@ -1,6 +1,6 @@
 import React from "react";
 
-function Register() {
+function Login() {
     return (
         <div>
             <div className="hidden lg:block font-rale text-5xl font-light p-10 pb-2 text-center">
@@ -93,4 +93,4 @@ function Register() {
     );
 }
 
-export default Register;
+export default Login;

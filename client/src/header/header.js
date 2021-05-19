@@ -1,6 +1,6 @@
 import React from "react";
 import Generator from "../generator/generator";
-import Register from "../register/register.js";
+import Login from "../login/login.js";
 import FAQ from "../faq/faq";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import logo from "../logo.png"
@@ -47,7 +47,7 @@ function Header() {
         <Switch>
           <Route path="/" component={Generator} exact />
           <Route path="/faq" component={FAQ} />
-          <Route path="/register" component={Register} />
+          <Route path="/login" component={Login} />
           <Route component={Error} />
         </Switch>
       </Route>
