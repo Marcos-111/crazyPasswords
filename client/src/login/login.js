@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import Axios from 'axios';
 
 function Login() {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+
+    const login = () => {
+        Axios.post("http://localhost:3001/login", {
+            username: username,
+            password: password,
+        }).then((response) => {
+            console.log(response);
+        });
+    };
     return (
         <div>
             <div className="hidden lg:block font-rale text-5xl font-light p-10 pb-2 text-center">
                 <h1>Crazy Passwords</h1>
             </div>
-
-
             <section className="flex flex-col md:p-24 md: pt-12 md:flex-row h-screen items-center">
-
                 <div className="grid grid-cols-1 md:grid-cols-1">
                     <div className="hidden lg:block font-rale text-3xl font-light p-8 pb-12 text-center">
                         <h1>Trusted by them, because it's crazy, because it's yours</h1>
@@ -26,7 +35,6 @@ function Login() {
                             </div>
                         </div>
                     </div>
-
                     <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
                         <div className="md:flex">
                             <div className="md:flex-shrink-0">
@@ -41,52 +49,47 @@ function Login() {
                         </div>
                     </div>
                 </div>
-
                 <div className="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
         flex items-center justify-center">
 
                     <div className="w-full h-100">
-
                         <h1 className="text-xl md:text-2xl font-bold leading-tight mt-12">Log in to your account</h1>
-
-                        <form className="mt-6" action="#" method="POST">
+                        <section className="mt-6">
                             <div>
-                                <label className="block text-gray-700">Email Address</label>
-                                <input type="email" name="" id="" placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required />
+                                <label htmlFor="login" className="block text-gray-700">Username</label>
+                                <input onChange={(e) => {
+                                    setUsername(e.target.value);
+                                }} type="text" placeholder="Enter username" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" />
                             </div>
 
                             <div className="mt-4">
-                                <label className="block text-gray-700">Password</label>
-                                <input type="password" name="" id="" placeholder="Enter Password" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
-                focus:bg-white focus:outline-none" required />
+                                <label htmlFor="login" className="block text-gray-700">Password</label>
+                                <input onChange={(e) => {
+                                    setPassword(e.target.value);
+                                }} type="password" placeholder="Enter Password" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                focus:bg-white focus:outline-none"/>
                             </div>
 
                             <div className="text-right mt-2">
-                                <a href="#" className="text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700">Forgot Password?</a>
+                                <a href="/" className="text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700">Forgot Password?</a>
                             </div>
 
-                            <button type="submit" className="w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
+                            <button onClick={login} type="submit" className="w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
               px-4 py-3 mt-6">Log In</button>
-                        </form>
-
+                        </section>
                         <div className="my-6 border-gray-300 w-full">
-
                             <button type="button" className="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300">
                                 <div className="flex items-center justify-center">
-                                    <span className="ml-4">
-                                        Log in
-                                        with
-            Google</span>
+                                    <span className="ml-4">Log in with Google</span>
                                 </div>
                             </button>
                         </div>
-                        <p className="mt-8">Need an account? <a href="#" className="text-blue-500 hover:text-blue-700 font-semibold">Create an
+                        <p className="mt-8">Need an account? <a href="/register" className="text-blue-500 hover:text-blue-700 font-semibold">Create an
               account</a></p>
 
                         <p className="text-sm text-gray-500 mt-12">&copy; 2021 CrazyPasswords - All Rights Reserved.</p>
                     </div>
                 </div>
-
             </section>
         </div>
 

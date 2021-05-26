@@ -111,14 +111,14 @@ function Generator() {
                   <h1 className="text-base font-semibold text-2xl text-gray-900">
                     Password Generator
                   </h1>
-                  <br/>
+                  <br />
                   <div className="flex justify-between text-base font-normal text-gray-900 ">
                     <h3 className=" ">{password}</h3>
-                    <button className="font-normal text-gray-700 " onClick={handleCopyPassword}>
-                      Copy <i></i>
-                    </button>
+                    <input type="button" value="Copy" className="font-normal cursor-pointer text-gray-700 " onClick={handleCopyPassword}/>
+              
+                
                   </div>
-                  <br/>
+                  <br />
                   <div>
                     <label htmlFor="password-strength" className="font-normal text-gray-700 font-semibold">
                       Password length
@@ -223,24 +223,24 @@ function Generator() {
                 </section>
               </div>
               <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                <button
+                <input
+                  type="button"
                   onClick={handleGeneratePassword}
-                  className=" inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Generate Password
-                </button>
-                <div class="mt-4 cursor-pointer">
-                <ToastContainer
-                  position="top-center"
-                  autoClose={5000}
-                  hideProgressBar={false}
-                  newestOnTop={false}
-                  closeOnClick
-                  rtl={false}
-                  pauseOnFocusLoss
-                  draggable
-                  pauseOnHover
+                  value="Generate Password"
+                  className="cursor-pointer inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 />
+                <div class="mt-4 cursor-pointer">
+                  <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                  />
                 </div>
               </div>
             </div>
