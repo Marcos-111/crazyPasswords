@@ -6,10 +6,9 @@ function Register() {
     const [passwordReg, setPasswordReg] = useState("");
 
     const register = () => {
-        Axios.post("https://localhost/3000/register", {
+        Axios.post("http://localhost:3001/register", {
             username: usernameReg,
             password: passwordReg,
-
         }).then((response) => {
             console.log(response);
         });
@@ -21,7 +20,6 @@ function Register() {
                 <h1>Crazy Passwords</h1>
             </div>
             <section className="flex flex-col md:p-24 md: pt-12 md:flex-row h-screen items-center">
-
                 <div className="grid grid-cols-1 md:grid-cols-1">
                     <div className="hidden lg:block font-rale text-3xl font-light p-8 pb-12 text-center">
                         <h1>Trusted by them, because it's crazy, because it's yours</h1>
@@ -64,25 +62,20 @@ function Register() {
                         <section className="mt-6">
                             <div>
                                 <label className="block text-gray-700">Username</label>
-                                <input type="text"
+                                <input
                                     onChange={(e) => {
                                         setUsernameReg(e.target.value);
-                                    }} required type="text" placeholder="Enter an username" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" />
+                                    }} type="text" placeholder="Enter an username" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" />
                             </div>
 
                             <div className="mt-4">
-                                <label className="block text-gray-700">Password</label>
-                                <input type="text"
+                                <label htmlFor="register" className="block text-gray-700">Password</label>
+                                <input
                                     onChange={(e) => {
                                         setPasswordReg(e.target.value);
                                     }}
-                                    type="password" name="" id="" placeholder="Enter Password" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
-                focus:bg-white focus:outline-none" required />
-                            </div>
-                            <div className="mt-4">
-                                <label className="block text-gray-700">Repeat Password</label>
-                                <input type="password" name="" id="" placeholder="Enter Password" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
-                focus:bg-white focus:outline-none" required />
+                                    type="password" placeholder="Enter Password" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                focus:bg-white focus:outline-none"/>
                             </div>
 
                             <button onClick={register} type="submit" className="w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
